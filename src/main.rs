@@ -29,7 +29,7 @@ use snarkvm::utilities::sync::atomic::AtomicI64;
 /// Run the PoSW prover for 20 seconds, attempting to generate as many proofs as possible.
 fn main() {
     println!("Running initial setup...");
-
+    env_logger::init();
     // Construct the block template.
     let block = Testnet2::genesis_block();
     let block_template = BlockTemplate::new(
