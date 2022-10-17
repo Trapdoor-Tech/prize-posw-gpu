@@ -54,12 +54,12 @@ fn main() {
             Ok(num) => num,
             Err(e) => {
                 info!("Parse worker number error {:?}, use default 1", e);
-                1usize
+                100usize
             }
         },
         Err(e) => {
             info!("Get worker number error {:?}, use default 1", e);
-            1usize
+            100usize
         }
     };
     const MAXIMUM_MINING_DURATION: u64 = 20;
