@@ -105,7 +105,7 @@ fn main() {
                 let proof = match Testnet2::posw()
                     .prove_once_unchecked(&mut circuit, &terminator_vec, &mut thread_rng()) {
                     Ok(proof1) => proof1,
-                    Err(e) => break,
+                    Err(e) => continue,
                 };
 
                 // Check if the updated proof is valid.
